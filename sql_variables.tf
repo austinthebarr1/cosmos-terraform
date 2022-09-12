@@ -7,6 +7,7 @@ variable "sql_dbs" {
   }))
   description = "Map of Cosmos DB SQL DBs to create. Some parameters are inherited from cosmos account."
   default     = {}
+
 }
 
 variable "sql_db_containers" {
@@ -43,3 +44,4 @@ variable "sql_db_containers" {
   description = "List of Cosmos DB SQL Containers to create. Some parameters are inherited from cosmos account."
   default     = {}
 }
+

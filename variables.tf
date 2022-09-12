@@ -1,4 +1,4 @@
-variable "resource_group_name" {
+variable "resourceGroupName" {
   type        = string
   description = "Name of the azure resource group you requested in chip."
 }
@@ -23,15 +23,16 @@ variable "cosmos_api" {
   }
 }
 
-variable "application_name" {
-  type        = string
-  description = "Name of the application."
-}
-
 variable "environment" {
   type        = string
   description = "Name of the environment. Example TEST, QA, PROD etc..."
   default     = "TEST"
+
+
+validation {
+    condition     = contains(["TEST", "QA", "PROD"], upper(var.environment))
+    error_message = "please choose one of the following environment TEST, QA, PROD"
+  }
 }
 
 variable "consistency_level" {
@@ -106,7 +107,7 @@ variable "geo_locations" {
   type        = any
   default = [
     {
-      geo_location      = "eastus"
+      geo_location      = "West Central US"
       failover_priority = 0
       zone_redundant    = false
     },

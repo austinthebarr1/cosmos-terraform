@@ -15,12 +15,12 @@ provider "azurerm" {
 
 
 module "azure_cosmos_db" {
-  source              = "../"
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  cosmos_account_name = var.cosmos_account_name
-  cosmos_api          = var.cosmos_api
-  sql_dbs             = var.sql_dbs
-  sql_db_containers   = var.sql_db_containers
-  required_tags       = var.required_tags
+  source               = "../"
+  resourceGroupName    = var.resourceGroupName
+  location             = var.location
+  cosmos_account_name  = var.cosmos_account_name
+  cosmos_api           = var.cosmos_api
+  required_tags        = var.required_tags
+  mongo_db_collections = var.mongo_db_collections
+  mongo_dbs            = var.mongo_dbs
 }

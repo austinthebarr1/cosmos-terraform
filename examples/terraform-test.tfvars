@@ -1,11 +1,10 @@
-
-resource_group_name = "sonarqubeapi-test-group"
+resourceGroupName   = "TerraformTest-test-group"
 location            = "westus2"
-cosmos_account_name = "sqapi"
+cosmos_account_name = "terraformtestcomos"
 cosmos_api          = "mongo"
 mongo_dbs = {
   one = {
-    db_name           = "sqmgrapi"
+    db_name           = "TfTest"
     db_throughput     = 400
     db_max_throughput = 1000
   }
@@ -13,8 +12,8 @@ mongo_dbs = {
 
 mongo_db_collections = {
   one = {
-    collection_name           = "ProjectTags"
-    db_name                   = "sqmgrapi"
+    collection_name           = "collectiontest"
+    db_name                   = "TfTest"
     default_ttl_seconds       = "2592000"
     shard_key                 = "ShardKey"
     collection_throughout     = 400
@@ -29,15 +28,12 @@ mongo_db_collections = {
   },
 }
 
-tags = {
-  applicationname = "sonarqubeapi"
-  contact         = "devsecops.admins@alaskaair.com"
-  environment     = "test"
-  inuse           = "true"
-  productname     = "security"
-  team            = "devsecops"
+required_tags = {
+  ApplicationName = "TestCosmosModule"
+  Contact         = "devsecops.admins@alaskaair.com"
+  Environment     = "TEST"
+  InUse           = "true"
+  ProductName     = "security"
+  Team            = "devsecops"
 }
 
-public_network_access_enabled = true
-ip_firewall_enabled           = true
-firewall_ip                   = ["159.49.0.0"]

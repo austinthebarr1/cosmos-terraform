@@ -5,7 +5,9 @@ resource "azurerm_cosmosdb_account" "this" {
   offer_type                    = "Standard"
   kind                          = var.cosmos_api == "mongo" ? "MongoDB" : "GlobalDocumentDB"
   public_network_access_enabled = true
-  ip_range_filter               = ["0.0.0.0.0", "159.49.0.0/24", "4.35.246.0/24", "50.228.14.0/24","63.236.113.225/24", "63.236.116.0/24"]
+  ip_range_filter               = "0.0.0.0,159.49.0.0/24,4.35.246.0/24,50.228.14.0/24,63.236.113.225/24,63.236.116.0/24"
+
+
   enable_automatic_failover       = var.auto_failover
   enable_free_tier                = var.free_tier
   enable_multiple_write_locations = var.multi_region_write
