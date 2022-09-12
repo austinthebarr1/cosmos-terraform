@@ -20,22 +20,22 @@ mongo_db_collections = {
     collection_throughout     = 400
     collection_max_throughput = null
     analytical_storage_ttl    = null
-    indexes                   = {
-      indexone                = {
-        mongo_index_keys          = ["_id"]
-        mongo_index_unique        = true
+    indexes = {
+      indexone = {
+        mongo_index_keys   = ["_id"]
+        mongo_index_unique = true
       }
     }
   },
 }
 
 tags = {
-      applicationname = "sonarqubeapi"
-      contact         = "devsecops.admins@alaskaair.com"
-      environment     = "test"
-      inuse           = "true"
-      productname     = "security"
-      team            = "devsecops"
+  applicationname = "sonarqubeapi"
+  contact         = "devsecops.admins@alaskaair.com"
+  environment     = "test"
+  inuse           = "true"
+  productname     = "security"
+  team            = "devsecops"
 }
 
 public_network_access_enabled = true
