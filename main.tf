@@ -1,13 +1,3 @@
-# Azure provider version 
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = ">=3.0"
-    }
-  }
-}
-
 resource "azurerm_cosmosdb_account" "this" {
   name                          = var.cosmos_account_name
   location                      = local.location
