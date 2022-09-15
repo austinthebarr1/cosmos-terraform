@@ -1,1 +1,1 @@
-# terraform-azurerm-aag-cosmosdb
+# Terraform-azurerm-aag-cosmosdb
