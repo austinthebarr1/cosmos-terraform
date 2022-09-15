@@ -3,4 +3,4 @@
 # Docs - https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-code-owners
 # Codeowner Assignment -> Specify team that are admins on the repo
 
-* @Alaska-Airlines-Shared/devsecops @Alaska-Airlines-Shared/Team-Compute-Cloud
+* @Alaska-Airlines-Shared/devsecops, @Alaska-Airlines-Shared/Team-Compute-Cloud
